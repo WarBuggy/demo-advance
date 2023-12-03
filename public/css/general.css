@@ -11,6 +11,7 @@
     --welcomeTextScrollAnimationTime: 200;
     --welcomeBackgroundInitialSize: 20%;
     --welcomeBackgroundFinalSize: 150%;
+    --welcomeBackgroundInitialOpacity: 20%;
     --welcomeBackgroundAnimationTime: 1000;
 }
 
@@ -104,6 +105,7 @@ p {
     background-position: center;
     transform: rotate(210deg);
     filter: blur(4px);
+    opacity: var(--welcomeBackgroundInitialOpacity);
 }
 
 .divWelcomeText1Outer {
@@ -213,6 +215,7 @@ p {
     position: absolute;
     bottom: var(--welcomeTextRightSideInitialBottom);
     opacity: 0%;
+    cursor: pointer;
 }
 
 .divScrollOuter {
@@ -234,4 +237,5 @@ p {
     line-height: 3.5vh;
     position: absolute;
     top: var(--welcomeTextScrollInitialTop);
+    cursor: pointer;
 }

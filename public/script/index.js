@@ -216,13 +216,14 @@ function prepareWelcomeText8() {
 
 function prepareWelcomeText9() {
     let initValue = parseInt(window.rootStyle.getPropertyValue("--welcomeBackgroundInitialSize"));
+    let initOpacity = parseInt(window.rootStyle.getPropertyValue("--welcomeBackgroundInitialOpacity"));
     let data = {
         div: document.getElementById("divWelcomeBackground"),
         animationTime: window.rootStyle.getPropertyValue("--welcomeBackgroundAnimationTime"),
-        initialValues: [initValue],
-        finalValues: [parseInt(window.rootStyle.getPropertyValue("--welcomeBackgroundFinalSize"))],
-        affectedComponents: ["background-size"],
-        styleValues: ["auto |||%"],
+        initialValues: [initValue, initOpacity],
+        finalValues: [parseInt(window.rootStyle.getPropertyValue("--welcomeBackgroundFinalSize")), 100],
+        affectedComponents: ["background-size", "opacity"],
+        styleValues: ["auto |||%", "|||%"],
     };
     calculateIncrements(data);
     window.dataObject.welcomeBackground = data;
